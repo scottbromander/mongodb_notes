@@ -36,7 +36,7 @@ All data is grouped within documents:
 {
 	name: “Apple”,
 	price: 1.49,
-	vendor: “Fruit Basket”
+	vendor: “Welcome Basket”
 }
 ```
 
@@ -46,7 +46,7 @@ Potions can have different key/value pairs but exist within the same collection:
 {
    name: “Apple”,
    price: 1.49,
-   vendor: “Fruit Basket”
+   vendor: “Welcome Basket”
 }
 {
    name: “Peach”,
@@ -70,34 +70,36 @@ Potions can have different key/value pairs but exist within the same collection:
 All installations of Mongo come with a command line program we can use to interact with our database using Javascript.
 
 ### We can write regular Javascript code. Example:
-> var potion = {
-	“name”: “Invisibility”,
-	“vendor”: “Kettlecooked”
+```javascript
+var fruit = {
+	“name”: “Apple”,
+	“vendor”: “Welcome Basket”
 }
-
+```
+```javascript
 > potion
-
+(console):
 {
-	“name”: “Invisibility”,
-	“vendor”: “Kettlecooked”
+	“name”: “Apple”,
+	“vendor”: “Welcome Basket”
 }
-
+```
 > “Documents are just JSON-like Objects”
 
 Some Shell commands:
-> use reviews -> Will switch to a database called reviews (which does not exist yet! But will once we save to it!)
-> db -> Shows us which DB we are using. Returns the current database name.
-> show dbs -> Shows a list of all databases. Shows specifically name and size of DB.
+* use reviews -> Will switch to a database called reviews (which does not exist yet! But will once we save to it!)
+* db -> Shows us which DB we are using. Returns the current database name.
+* show dbs -> Shows a list of all databases. Shows specifically name and size of DB.
 
-“Documents need to be stored in Collections”
-Documents are always stored in collections within a database.
-
-> db.potions.insert(
+'Documents need to be stored in Collections', or 'Documents are always stored in collections within a database.'
+```javascript
+db.fruits.insert(
 	{
-		“name”: “Invisibility”,
-		“vendor”: “Kettlecooked”
+		“name”: “Apple”,
+		“vendor”: “Welcome Basket”
 	{
 )
+```
 Whats cool here is that with the ‘insert’ collection method, we save the document into a ‘potions’ collection which is dynamically created. Meaning, this collection does not exist yet, but it will be automagically created. 
 
 We get back a console log:
@@ -120,16 +122,16 @@ So if we looked for all documents of a particular vendor, it would give them all
 
 Documents are persisted in a format called “BSON” which is like JSON.
 It can store:
-Strings
-Numbers
-Boolean
-Arrays
-Objects
-Null
+* Strings
+* Numbers
+* Boolean
+* Arrays
+* Objects
+* Null
 
 BSON has some extras:
-ObjectID
-Date - ISODate
+* ObjectID
+* Date - ISODate
 
 To learn more about BSON, head to:
 http://go.codeschool.com/bson-spec
