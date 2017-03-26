@@ -59,17 +59,17 @@ Potions can have different key/value pairs but exist within the same collection:
 }
 ```
 
-Dynamic Schema: 
+### Dynamic Schema: 
 > Means that documents have different data but exist in the same collection.
 
-Where can write Mongo?
+### Where can write Mongo?
 * In the ‘shell’
 * To get there, after we install mongo, go to terminal and type ‘mongo’, this will bring you into the mongo shell.
 * Commands go after the ">".
 
 All installations of Mongo come with a command line program we can use to interact with our database using Javascript.
 
-We can write regular Javascript code. Example:
+### We can write regular Javascript code. Example:
 > var potion = {
 	“name”: “Invisibility”,
 	“vendor”: “Kettlecooked”
@@ -82,7 +82,7 @@ We can write regular Javascript code. Example:
 	“vendor”: “Kettlecooked”
 }
 
-“Documents are just JSON-like Objects”
+> “Documents are just JSON-like Objects”
 
 Some Shell commands:
 > use reviews -> Will switch to a database called reviews (which does not exist yet! But will once we save to it!)
