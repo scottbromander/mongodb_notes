@@ -15,7 +15,7 @@ The main difference? SQL is relational and MongoDB is document-oriented.
 
 Relational database management systems save data in rows within tables. MongoDB saves data as documents within collections. 
 
-Potion Table
+### Potion Table
 
 | potion_id        | name           | price  | vendor_id |
 | ------------- |:-------------:| -----:| -----:|
@@ -24,16 +24,13 @@ Potion Table
 | 3 | Shrinking     |    9.99 | 1 |
 
 
-Vendors Table
+### Vendors Table
 
 | vendor_id        |    name        | 
 | ------------- |:-------------:| 
 | 1      | Kettlecooked | 
 | 2     | Brewers     |   
-  
-MONGODB
 
-Potion Collections
 All data is grouped within documents:
 {
 	name: “Love”,
@@ -42,7 +39,6 @@ All data is grouped within documents:
 }
 
 Collections are simply groups of documents. Since documents exist independently, they can have different fields. 
-
 Potions can have different key/value pairs but exist within the same collection:
 {
    name: “Love”,
