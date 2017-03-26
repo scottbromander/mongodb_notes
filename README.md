@@ -7,16 +7,15 @@ Document Orientated - Great for unstructured data, especially when you have lots
 
 SQL
 
-MongoDB
-database
-->
-database
-table
-->
-collection
-row
-->
-document
+
+
+| SQL        |            | MongoDB  |
+| ------------- |:-------------:| -----:|
+| database      | -> | database |
+| table     | ->     |   collection |
+| row | ->      |    document |
+
+
 
 The main difference? SQL is relational and MongoDB is document-oriented. 
 
