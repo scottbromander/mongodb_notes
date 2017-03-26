@@ -71,14 +71,14 @@ All installations of Mongo come with a command line program we can use to intera
 
 ### We can write regular Javascript code. Example:
 ```javascript
-var fruit = {
+> var fruit = {
 	“name”: “Apple”,
 	“vendor”: “Welcome Basket”
 }
 ```
 ```javascript
 > potion
-(console):
+console:
 {
 	“name”: “Apple”,
 	“vendor”: “Welcome Basket”
@@ -93,7 +93,7 @@ Some Shell commands:
 
 'Documents need to be stored in Collections', or 'Documents are always stored in collections within a database.'
 ```javascript
-db.fruits.insert(
+> db.fruits.insert(
 	{
 		“name”: “Apple”,
 		“vendor”: “Welcome Basket”
@@ -103,19 +103,27 @@ db.fruits.insert(
 Whats cool here is that with the ‘insert’ collection method, we save the document into a ‘potions’ collection which is dynamically created. Meaning, this collection does not exist yet, but it will be automagically created. 
 
 We get back a console log:
+```javascript
+console:
 WriteResult({ “nInserted” : 1 })
+```
 
 Whenever we write to the database, we’ll always be returned a WriteResult object that tells us if the operation was successful or not.
 
 We can use the ‘find()’ collection method to retrieve the potion from the inventory collection.
-> db.potions.find()
+```javascript
+> db.fruits.find()
+```
 
 All collection methods must end with parentheses. 
 In this case, find will return our one entry, but include a “_id”.
 Mongo requires that a unique ID gets written to each document entry, so it automatically creates one.
 
-db.potions.find({“name”: “Invisibility” });
-This is a query of equality. Checks the database for a entry with a “name” (key) of “Invisibility” (value).
+```javascript
+db.fruits.find({“name”: “Apple” });
+```
+
+This is a query of equality. Checks the database for a entry with a “name” (key) of “Apple” (value).
 Returns the entire document.
 Returns all documents with that value.
 So if we looked for all documents of a particular vendor, it would give them all to us.
@@ -140,30 +148,35 @@ MongoDB will preserve the precision of both floats and integers.
 
 Dates, Javascript uses “0” as the first month. So subtract 1 off of the normal month date.
 To create a date:
-“tryDate”: new Date(2012, 8, 13) -> is “September 13th, 2012”
+> “tryDate”: new Date(2012, 8, 13) -> is “September 13th, 2012”
 
 Dates get converted to an ISO format when saved to the database:
-“expiration”: ISODate(“2012-09-13T04:00:00Z”)
+> “expiration”: ISODate(“2012-09-13T04:00:00Z”)
 
 Can store any data type inside of an array:
-“ingredients”: [“newt toes”, 42, “laughter”];
+> “ingredients”: [“newt toes”, 42, “laughter”];
 
 We embed documents simply by adding the document as a value for a given field:
+```javascript
 {
 	…
 	“ratings”: { “strength”: 2, “flavor”: 5 }
 }
-
-db.potions.find({ “ingredients”: “laughter” });
+```
+```javascript
+db.fruits.find({ “colors”: “red” });
 {
-	“ingredients”: [“newt toes”, “secret”, “laughter”]
+	“colors”: [“green”, “red”, “dark red”]
 }
+```
 
 When performing a find on an array item, it will look through the entire array to find a value in there that matches to the find.
 
 For searching for equality in an embedded document, we use dot notation.
 
-db.portions.find( { “ratings.flavor” : 5 } )
+```javascript
+> db.fruit.find( { “ratings.flavor” : 5 } )
+```
 
 — REMOVING AND MODIFYING DOCUMENTS —
 
