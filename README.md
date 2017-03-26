@@ -59,13 +59,13 @@ Potions can have different key/value pairs but exist within the same collection:
 }
 ```
 
-Dynamic Schema: Means that documents have different data but exist in the same collection.
+Dynamic Schema: 
+> Means that documents have different data but exist in the same collection.
 
 Where can write Mongo?
-In the ‘shell’
-To get there, after we install mongo, go to terminal and type ‘mongo’, this will bring you into the mongo shell.
-
-Commands go after the >
+* In the ‘shell’
+* To get there, after we install mongo, go to terminal and type ‘mongo’, this will bring you into the mongo shell.
+* Commands go after the ">".
 
 All installations of Mongo come with a command line program we can use to interact with our database using Javascript.
 
