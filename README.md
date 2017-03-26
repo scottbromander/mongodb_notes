@@ -32,11 +32,13 @@ Relational database management systems save data in rows within tables. MongoDB 
 | 2     | Brewers     |   
 
 All data is grouped within documents:
+```javascript
 {
 	name: “Love”,
 	price: 3.99,
 	vendor: “Brewers”
 }
+```
 
 Collections are simply groups of documents. Since documents exist independently, they can have different fields. 
 Potions can have different key/value pairs but exist within the same collection:
