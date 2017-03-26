@@ -15,47 +15,49 @@ The main difference? SQL is relational and MongoDB is document-oriented.
 
 Relational database management systems save data in rows within tables. MongoDB saves data as documents within collections. 
 
-### Potion Table
+### Fruit Table
 
 | potion_id        | name           | price  | vendor_id |
 | ------------- |:-------------:| -----:| -----:|
-| 1      | Love | 3.99 | 2 |
-| 2     | Invisibility     |   15.99 | 1 |
-| 3 | Shrinking     |    9.99 | 1 |
+| 1      | Apple | 1.49 | 2 |
+| 2     | Peach     |   1.89 | 1 |
+| 3 | Watermelon     |    3.99 | 1 |
 
 
 ### Vendors Table
 
 | vendor_id        |    name        | 
 | ------------- |:-------------:| 
-| 1      | Kettlecooked | 
-| 2     | Brewers     |   
+| 1      | Welcome Basket | 
+| 2     | Big Bowl     |   
 
 All data is grouped within documents:
 ```javascript
 {
-	name: “Love”,
-	price: 3.99,
-	vendor: “Brewers”
+	name: “Apple”,
+	price: 1.49,
+	vendor: “Fruit Basket”
 }
 ```
 
 Collections are simply groups of documents. Since documents exist independently, they can have different fields. 
 Potions can have different key/value pairs but exist within the same collection:
+```javascript
 {
-   name: “Love”,
+   name: “Apple”,
+   price: 1.49,
+   vendor: “Fruit Basket”
+}
+{
+   name: “Peach”,
+   price: 1.89
+}
+{
+   name: “Watermelon”,
    price: 3.99,
-   vendor: “Brewer”
+   taste: “Great”
 }
-{
-   name: “Sleeping”,
-   price: 3.99
-}
-{
-   name: “Luck”,
-   price: 59.99,
-   danger: “High”
-}
+```
 
 Dynamic Schema: Means that documents have different data but exist in the same collection.
 
