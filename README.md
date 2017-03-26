@@ -5,48 +5,30 @@ Open Source, NoSQL - Databases that generally not relational and don’t have a 
 Document Orientated - Great for unstructured data, especially when you have lots of it.
 10gen - Developed it back in 2007, 2013 Company renamed to MongoDB
 
-SQL
-
-
-
 | SQL        |            | MongoDB  |
 | ------------- |:-------------:| -----:|
 | database      | -> | database |
 | table     | ->     |   collection |
 | row | ->      |    document |
 
-
-
 The main difference? SQL is relational and MongoDB is document-oriented. 
 
 Relational database management systems save data in rows within tables. MongoDB saves data as documents within collections. 
 
 Potion Table
-potion_id
-name
-price
-vendor_id
-1
-Love
-3.99
-2
-2
-Invisibility
-15.99
-1
-3
-Shrinking
-9.99
-1
+| potion_id        | name           | price  | vendor_id |
+| ------------- |:-------------:| -----:| -----:|
+| 1      | Love | 3.99 | 2 |
+| 2     | Invisibility     |   15.99 | 1 |
+| 3 | Shrinking     |    9.99 | 1 |
+
 
 Vendors Table
-vendor_id
-name
-1
-Kettlecooked
-2
-Brewers
-
+| vendor_id        |    name        | 
+| ------------- |:-------------:| 
+| 1      | Kettlecooked | 
+| 2     | Brewers     |   
+  
 MONGODB
 
 Potion Collections
