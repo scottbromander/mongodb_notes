@@ -2,7 +2,7 @@
 
 ### Installing MongoDB
 From terminal, enter the following commands :
-* `brew install mongo`
+* `brew install mongodb`
 * `mkdir -p /data/db`
 
 Now, to check and make sure everything is working OK, fire up MONGO:
