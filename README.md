@@ -154,7 +154,7 @@ Dates get converted to an ISO format when saved to the database:
 > “expiration”: ISODate(“2012-09-13T04:00:00Z”)
 
 Can store any data type inside of an array:
-> “ingredients”: [“newt toes”, 42, “laughter”];
+> “colors”: [“green”, "red", “dark red”];
 
 We embed documents simply by adding the document as a value for a given field:
 ```javascript
