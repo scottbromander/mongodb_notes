@@ -178,16 +178,16 @@ For searching for equality in an embedded document, we use dot notation.
 > db.fruit.find( { “ratings.flavor” : 5 } )
 ```
 
-— REMOVING AND MODIFYING DOCUMENTS —
+## Removing and Modifying Documents
 
 Removing a document with a query of equality:
-db.portions.remove({“name”: “Love”})
+db.fruits.remove({“name”: “Apple”})
 
 If our query matches multiple documents, then remove() will delete them all:
-db.portions.remove({“vendor”: “kettle cooked”})
+db.portions.remove({“vendor”: “Welcome Basket”})
 
 We can use the update() collection method to modify existing documents:
-db.potions.update({“name”: “Love”}, {“$set”: {“price” : 3.99} } )
+db.fruits.update({“name”: “Apple”}, {“$set”: {“price” : 3.99} } )
 
 UPDATE ONLY MATCHES TO THE FIRST MATCHING DOCUMENT!
 
