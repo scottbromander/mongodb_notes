@@ -1,9 +1,20 @@
 # mongodb_notes
 
-What is Mongo DB
+### Installing MongoDB
+From terminal, enter the following commands :
+`brew install mongo`
+`mkdir -p /data/db`
+
+Now, to check and make sure everything is working OK, fire up MONGO:
+`mongod` in One Terminal
+`mongo` in another Terminal
+
+The result, is that you should see a `>`
+Control + C to close out.
+
+### What is Mongo DB
 Open Source, NoSQL - Databases that generally not relational and don’t have a query language like SQL. 
 Document Orientated - Great for unstructured data, especially when you have lots of it.
-10gen - Developed it back in 2007, 2013 Company renamed to MongoDB
 
 | SQL        |            | MongoDB  |
 | ------------- |:-------------:| -----:|
