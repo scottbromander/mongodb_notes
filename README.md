@@ -15,7 +15,8 @@ Control + C to close out.
 
 ### Robomongo
 Robomongo is the visual tool we use to look at our Mongo Databases. Similar to Postico for SQL.
-Download Robomongo here: [https://robomongo.org/download]
+
+Download Robomongo here: https://robomongo.org/download
 
 ### What is Mongo DB
 Open Source, NoSQL - Databases that generally not relational and don’t have a query language like SQL. 
