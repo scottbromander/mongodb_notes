@@ -35,7 +35,7 @@ Relational database management systems save data in rows within tables. MongoDB 
 
 ### Fruit Table
 
-| potion_id        | name           | price  | vendor_id |
+| fruit_id        | name           | price  | vendor_id |
 | ------------- |:-------------:| -----:| -----:|
 | 1      | Apple | 1.49 | 2 |
 | 2     | Peach     |   1.89 | 1 |
