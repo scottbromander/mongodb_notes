@@ -202,7 +202,7 @@ Removing a document with a query of equality:
 db.fruits.remove({“name”: “Apple”})
 
 If our query matches multiple documents, then remove() will delete them all:
-db.portions.remove({“vendor”: “Welcome Basket”})
+db.fruits.remove({“vendor”: “Welcome Basket”})
 
 We can use the update() collection method to modify existing documents:
 db.fruits.update({“name”: “Apple”}, {“$set”: {“price” : 3.99} } )
