@@ -59,7 +59,7 @@ All data is grouped within documents:
 ```
 
 Collections are simply groups of documents. Since documents exist independently, they can have different fields. 
-Potions can have different key/value pairs but exist within the same collection:
+Fruits can have different key/value pairs but exist within the same collection:
 ```javascript
 {
    name: “Apple”,
@@ -95,7 +95,7 @@ All installations of Mongo come with a command line program we can use to intera
 }
 ```
 ```javascript
-> potion
+> fruit
 console:
 {
 	“name”: “Apple”,
@@ -118,7 +118,7 @@ Some Shell commands:
 	{
 )
 ```
-Whats cool here is that with the ‘insert’ collection method, we save the document into a ‘potions’ collection which is dynamically created. Meaning, this collection does not exist yet, but it will be automagically created. 
+Whats cool here is that with the ‘insert’ collection method, we save the document into a ‘fruits’ collection which is dynamically created. Meaning, this collection does not exist yet, but it will be automagically created. 
 
 We get back a console log:
 ```javascript
@@ -128,7 +128,7 @@ WriteResult({ “nInserted” : 1 })
 
 Whenever we write to the database, we’ll always be returned a WriteResult object that tells us if the operation was successful or not.
 
-We can use the ‘find()’ collection method to retrieve the potion from the inventory collection.
+We can use the ‘find()’ collection method to retrieve the fruit from the inventory collection.
 ```javascript
 > db.fruits.find()
 ```
