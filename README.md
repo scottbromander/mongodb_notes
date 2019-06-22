@@ -3,7 +3,7 @@
 ### Installing MongoDB
 From terminal, enter the following commands :
 * `brew install mongodb` - Install MongoDB using Homebrew.
-* `mkdir -p /data/db` - Create a folder for your databases to go.
+* From your root directory, run `mkdir -p /data/db` - This creates a folder for your databases to go.
 * `sudo chmod -R 777 /data/db` - Gives write permissions to your new folder.
 
 Now, to check and make sure everything is working OK, fire up MONGO:
